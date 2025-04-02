@@ -1,4 +1,5 @@
-public class Livro {
+package desafio_aula04.precofinal;
+public class Livro extends Produto implements Calculavel{
     private String titulo;
     private String autor;
 
@@ -20,5 +21,10 @@ public class Livro {
 
     public void exibirDetalhes() {
         System.out.println("Titulo : " + titulo + "Autor : " +autor);
+    }
+
+    @Override
+    public double calcularPrecoFinal() {
+        return getPreco() * 0.9;
     }
 }
